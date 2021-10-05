@@ -9,9 +9,7 @@ import java.util.Objects;
 @Table(name = "TRANSACTIONS", schema = "hr")
 public class Transactions implements Serializable {
 
-    /*@ManyToOne
-    @JoinColumn(name = "MEMBER_ID")
-    private Members members;*/
+
 
     @Id
     @SequenceGenerator(name= "VIT_RSA_GENERIC_SEQ", sequenceName = "VITRSA_SANDBOX.VIT_RSA_GENERIC_SEQ", allocationSize = 1)
@@ -25,10 +23,12 @@ public class Transactions implements Serializable {
     @Column(name = "T_AMOUNT")
     private String T_AMOUNT;
 
-    @Column(name = "MEMBER_ID")
-    private String MEMBER_ID;
+    @ManyToOne
+    @JoinColumn(name = "MEMBER_ID")
+    private Members MEMBER_ID;
 
-    public Transactions(Long t_ID, String t_START_DATE, String t_AMOUNT, String MEMBER_ID) {
+
+    public Transactions(Long t_ID, String t_START_DATE, String t_AMOUNT, Members MEMBER_ID) {
         T_ID = t_ID;
         T_START_DATE = t_START_DATE;
         T_AMOUNT = t_AMOUNT;
@@ -62,11 +62,11 @@ public class Transactions implements Serializable {
         T_AMOUNT = t_AMOUNT;
     }
 
-    public String getMEMBER_ID() {
+    public Members getMEMBER_ID() {
         return MEMBER_ID;
     }
 
-    public void setMEMBER_ID(String MEMBER_ID) {
+    public void setMEMBER_ID(Members MEMBER_ID) {
         this.MEMBER_ID = MEMBER_ID;
     }
 
