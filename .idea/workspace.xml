@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06e1a5b3-7b8c-4cb2-af53-aa53724b7b00" name="Changes" comment="AccountSystem1 commit">
-      <change afterPath="$PROJECT_DIR$/AccountSystemRepository/src/main/java/za/ac/nwu/ac/repo/config/RepositoryConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AccountSystemRepository/src/main/resources/application-db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemDomain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemDomain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemDomain/src/main/java/za/ac/nwu/ac/domain/persistence/AccountTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemDomain/src/main/java/za/ac/nwu/ac/domain/persistence/AccountTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemDomain/src/main/java/za/ac/nwu/ac/domain/persistence/Members.java" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemDomain/src/main/java/za/ac/nwu/ac/domain/persistence/Members.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemDomain/target/AccountSystemDomain-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemDomain/target/AccountSystemDomain-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemDomain/target/classes/za/ac/nwu/ac/domain/persistence/AccountTransaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemDomain/target/classes/za/ac/nwu/ac/domain/persistence/AccountTransaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemLogic/target/AccountSystemLogic-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemLogic/target/AccountSystemLogic-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemRepository/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemRepository/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemRepository/target/AccountSystemRepository-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemRepository/target/AccountSystemRepository-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemTranslator/target/AccountSystemTranslator-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemTranslator/target/AccountSystemTranslator-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemWebSpringBoot/target/AccountSystemWebSpringBoot-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemWebSpringBoot/target/AccountSystemWebSpringBoot-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemWebSpringBoot/target/AccountSystemWebSpringBoot-1.0-SNAPSHOT.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemWebSpringBoot/target/AccountSystemWebSpringBoot-1.0-SNAPSHOT.war.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemWebSpringBoot/target/AccountSystemWebSpringBoot-1.0-SNAPSHOT/WEB-INF/lib/AccountSystemDomain-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemWebSpringBoot/target/AccountSystemWebSpringBoot-1.0-SNAPSHOT/WEB-INF/lib/AccountSystemDomain-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemWebSpringBoot/target/AccountSystemWebSpringBoot-1.0-SNAPSHOT/WEB-INF/lib/AccountSystemLogic-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/AccountSystemWebSpringBoot/target/AccountSystemWebSpringBoot-1.0-SNAPSHOT/WEB-INF/lib/AccountSystemLogic-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountSystemWebSpringBoot/target/AccountSystemWebSpringBoot-1.0-SNAPSHOT/WEB-INF/lib/lombok-1.18.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="06e1a5b3-7b8c-4cb2-af53-aa53724b7b00" name="Changes" comment="AccountSystem1 commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633444110661</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="AccountSystem1 commit">
+      <created>1633447805628</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1633447805628</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
