@@ -1,0 +1,6 @@
+za\ac\nwu\ac\domain\persistence\AccountTransaction.class
+za\ac\nwu\ac\domain\persistence\Currency.class
+za\ac\nwu\ac\domain\persistence\AccountType.class
+za\ac\nwu\ac\domain\persistence\Members.class
+za\ac\nwu\ac\domain\persistence\Transactions.class
+za\ac\nwu\ac\domain\service\GeneralResponse.class
