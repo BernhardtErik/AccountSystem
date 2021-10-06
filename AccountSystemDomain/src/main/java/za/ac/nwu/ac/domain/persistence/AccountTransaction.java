@@ -8,22 +8,22 @@ import java.util.Objects;
 
 
 @Entity
-@Table(name= "ACCOUNT_TRANSACTION",schema = "VITRSA_SANDBOX")
+@Table(name= "ACCOUNT_TX",schema = "hr")
 public class AccountTransaction implements Serializable{
 
-    private static final long serialVersionUID = 5320578942102714156L;
-    @Id
-    @SequenceGenerator(name = "VIT_RSA_GENERIC_SEQ",sequenceName = "VITRSA_SANDBOX.VIT_RSA_GENERIC_SEQ",allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "VIT_RSA_GENERIC_SEQ")
+    private static final long serialVersionUID = -5507275084573016340L;
+
+//    @SequenceGenerator(name = "VIT_RSA_GENERIC_SEQ",sequenceName = "VITRSA_SANDBOX.VIT_RSA_GENERIC_SEQ",allocationSize = 1)
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "VIT_RSA_GENERIC_SEQ")
 
 
     private Long transactionID;
-    private Long accountTypeId;
-    private Long member_ID;
+    private AccountType accountTypeId;
+    private Members member_ID;
     private Long amount;
     private LocalDate transactionDate;
 
-    public AccountTransaction(Long transactionID, Long accountTypeId, Long member_ID, Long amount, LocalDate transactionDate) {
+    public AccountTransaction(Long transactionID, AccountType accountTypeId, Members member_ID, Long amount, LocalDate transactionDate) {
         this.transactionID = transactionID;
         this.accountTypeId = accountTypeId;
         this.member_ID = member_ID;
@@ -34,7 +34,8 @@ public class AccountTransaction implements Serializable{
     public AccountTransaction() {
     }
 
-    @Column(name = "TX_ID")
+    @Id
+    @Column(name = "ACCOUNT_TX_ID")
     public Long getTransactionID() {
         return transactionID;
     }
@@ -43,21 +44,20 @@ public class AccountTransaction implements Serializable{
     }
 
     // Indicate the FK
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "ACCOUNT_TYPE_ID")
-    @Column(name = "ACCOUNT_TYPE_ID")
-    public Long getAccountTypeId() {
+    public AccountType getAccountTypeId() {
         return accountTypeId;
     }
-    public void setAccountTypeId(Long accountTypeId) {
+    public void setAccountTypeId(AccountType accountTypeId) {
         this.accountTypeId = accountTypeId;
     }
-
-    @Column(name = "MEMBER_ID")
-    public Long getMember_ID() {
+    @ManyToOne
+    @JoinColumn(name = "MEMBER_ID")
+    public Members getMember_ID() {
         return member_ID;
     }
-    public void setMember_ID(Long member_ID) {
+    public void setMember_ID(Members member_ID) {
         this.member_ID = member_ID;
     }
 

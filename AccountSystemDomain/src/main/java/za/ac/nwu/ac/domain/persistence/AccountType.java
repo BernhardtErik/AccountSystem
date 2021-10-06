@@ -1,5 +1,6 @@
 package za.ac.nwu.ac.domain.persistence;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.javafx.beans.IDProperty;
 
 import javax.persistence.*;
@@ -10,14 +11,16 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "DEMO_ACCOUNT_TYPE", schema = "VITRSA_SANDBOX")
+@Table(name = "ACCOUNT_TYPE", schema = "hr")
 public class AccountType implements Serializable {
 
-    @Id
-    @SequenceGenerator(name= "VIT_RSA_GENERIC_SEQ", sequenceName = "VITRSA_SANDBOX.VIT_RSA_GENERIC_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "VIT.RSA_GENERIC_SEQ")
+    private static final long serialVersionUID = 5029361751175257133L;
 
     private Long accountTypeId;
+
+//    @SequenceGenerator(name= "VIT_RSA_GENERIC_SEQ", sequenceName = "VITRSA_SANDBOX.VIT_RSA_GENERIC_SEQ", allocationSize = 1)
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "VIT.RSA_GENERIC_SEQ")
+
     private String mnemonic;
     private String accountTypeName;
     private LocalDate creationDate;
@@ -34,6 +37,7 @@ public class AccountType implements Serializable {
     public AccountType() {
     }
 
+    @Id
     @Column(name = "ACCOUNT_TYPE_ID")
     public Long getAccountTypeId() {
         return accountTypeId;
@@ -67,6 +71,7 @@ public class AccountType implements Serializable {
     }
 
     @OneToMany(targetEntity = AccountTransaction.class, fetch = FetchType.LAZY, mappedBy = "accountTypeId", orphanRemoval = true, cascade = CascadeType.PERSIST)
+    @JsonIgnore
     public Set<AccountTransaction> getAccountTransactions(){
         Set<AccountTransaction> getAccountTransaction;
         return accountTransactions;
