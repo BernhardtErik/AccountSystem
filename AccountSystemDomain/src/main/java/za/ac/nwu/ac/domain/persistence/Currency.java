@@ -10,8 +10,8 @@ import java.util.Set;
 @Table(name = "CURRENCY", schema = "hr")
 public class Currency implements Serializable {
 
- /*   @OneToMany(targetEntity = Members.class, fetch = FetchType.LAZY, mappedBy = "currency", cascade = CascadeType.ALL)
-    private Set<Members> members;*/
+    @OneToMany(targetEntity = Members.class, fetch = FetchType.LAZY, mappedBy = "currency", cascade = CascadeType.ALL)
+    private Set<Members> members;
 
 //    EAGER
 

@@ -34,15 +34,13 @@ public class Members implements Serializable {
     @JoinColumn(name = "C_ID")
     private Currency currency;
 
-    @Column(name = "C_ID")
-    private String c_ID;
 
-    public Members(Long member_Id, String m_Name, String m_LastName, String balance, String c_ID) {
+    public Members(Long member_Id, String m_Name, String m_LastName, String balance, Currency currency) {
         this.member_Id = member_Id;
         this.m_Name = m_Name;
         this.m_LastName = m_LastName;
         this.balance = balance;
-        this.c_ID = c_ID;
+        this.currency = currency;
     }
 
     public Members() {
@@ -80,12 +78,12 @@ public class Members implements Serializable {
         this.balance = balance;
     }
 
-    public String getC_ID() {
-        return c_ID;
+    public Currency getC_ID() {
+        return currency;
     }
 
-    public void setC_ID(String c_ID) {
-        this.c_ID = c_ID;
+    public void setC_ID(Currency currency) {
+        this.currency = currency;
     }
 
     @Override
@@ -93,12 +91,12 @@ public class Members implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Members members = (Members) o;
-        return Objects.equals(member_Id, members.member_Id) && Objects.equals(m_Name, members.m_Name) && Objects.equals(m_LastName, members.m_LastName) && Objects.equals(balance, members.balance) && Objects.equals(c_ID, members.c_ID);
+        return Objects.equals(member_Id, members.member_Id) && Objects.equals(m_Name, members.m_Name) && Objects.equals(m_LastName, members.m_LastName) && Objects.equals(balance, members.balance) && Objects.equals(currency, members.currency);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(member_Id, m_Name, m_LastName, balance, c_ID);
+        return Objects.hash(member_Id, m_Name, m_LastName, balance, currency);
     }
 
     @Override
@@ -108,7 +106,7 @@ public class Members implements Serializable {
                 ", m_Name='" + m_Name + '\'' +
                 ", m_LastName='" + m_LastName + '\'' +
                 ", balance='" + balance + '\'' +
-                ", c_ID='" + c_ID + '\'' +
+                ", c_ID='" + currency + '\'' +
                 '}';
     }
 }
