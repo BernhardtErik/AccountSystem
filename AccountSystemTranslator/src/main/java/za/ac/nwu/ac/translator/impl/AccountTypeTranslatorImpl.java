@@ -6,8 +6,11 @@ import za.ac.nwu.ac.domain.dto.AccountTypeDto;
 import za.ac.nwu.ac.domain.persistence.AccountType;
 import za.ac.nwu.ac.repo.persistence.AccountTypeRepository;
 import za.ac.nwu.ac.translator.AccountTypeTranslator;
+
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+
 
 @Component
 public class AccountTypeTranslatorImpl implements AccountTypeTranslator {
@@ -30,5 +33,15 @@ public class AccountTypeTranslatorImpl implements AccountTypeTranslator {
             throw new RuntimeException("Unable to read from the DB", e);
         }
         return accountTypeDtos;
+    }
+
+    @Override
+    public AccountTypeDto create(AccountTypeDto accountTypeDto) {
+        try {
+            AccountType accountType = accountTypeRepository.save(accountTypeDto.getAccountType());
+            return new AccountTypeDto(accountType);
+        } catch (Exception e) {
+            throw new RuntimeException("Unable to save to the database",e);
+        }
     }
 }
